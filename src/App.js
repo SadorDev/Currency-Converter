@@ -8,6 +8,8 @@ function App() {
   const [converted, setConverted] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+
+
   useEffect(() => {
     async function convert() {
       setIsLoading(true);
@@ -19,7 +21,7 @@ function App() {
       setIsLoading(false);
     }
 
-    
+
     if (fromCur === toCur) return setConverted(amount);
     convert();
   }, [amount, fromCur, toCur]);
